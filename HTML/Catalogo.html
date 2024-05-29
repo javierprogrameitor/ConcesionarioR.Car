@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.css"
+        integrity="sha512-KOWhIs2d8WrPgR4lTaFgxI35LLOp5PRki/DxQvb7mlP29YZ5iJ5v8tiLWF7JLk5nDBlgPP1gHzw96cZ77oD7zQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../JS/navegacion.js" defer></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'custom-green': '#A6B6A0',
+                        'custom-gray': '#C4C4C4',
+                    },
+                },
+            }
+        }
+    </script>
+    <style>
+        @font-face {
+            font-family: 'Bobby-Jones';
+            src: url('../IMGCRS/bobby_jones/BobbyJones/BobbyJonesSoft.otf') format('opentype');
+        }
+
+
+        .text-shadow-black {
+            text-shadow: 1px 1px 1px rgba(1, 1, 1, 1);
+        }
+
+        .text-shadow-white {
+            text-shadow: 1px 1px 1px rgb(253, 253, 260);
+        }
+
+        .font-bobby-jones {
+            font-family: 'Bobby-Jones', sans-serif;
+        }
+
+    </style>
+    <title>Catalogo</title>
+</head>
+
+<body class="bg-custom-green">
+    <nav class="bg-custom-green flex flex-wrap justify-evenly p-6">
+        <div class="flex items-center">
+            <img src="../IMG/logoConcesionario.png" alt="Logo" class="h-20 w-20">
+        </div>
+        <div class="text-center">
+            <span class="text-shadow-black text-green-600 text-3xl md:text-5xl font-bobby-jones">RENEW CAR, NUEVOS,
+                IMPORTADOS Y ALTA GAMMA</span>
+        </div>
+    </nav>
+    <div>
+        <hr class="w-full border-t-1 border-white">
+    </div>
+    <div class="flex flex-wrap justify-evenly m-1">
+        <div class="text-sm breadcrumbs">
+            <ul>
+
+                <li><a>
+                        <form action="Login.html" method="POST" class="m-2">
+                            <button id="registroCatalogo"
+                                class="text-gray-100  text-lg md:text-2xl font-black text-shadow-black border-solid">REGISTRARSE</button>
+                        </form>
+                    </a></li>
+                <li><a>
+                        <form action="Principal.html" method="POST" class="m-2">
+                            <button id="inicioCatalogo"
+                                class="text-gray-100 text-lg md:text-2xl font-black text-shadow-black border-solid">INICIAR</button>
+                        </form>
+                    </a></li>
+
+                <li><a>
+                        <form action="Guardar.html" method="POST" class="m-2">
+                            <button id="guardarCatalogo"
+                                class="text-gray-100 text-lg md:text-2xl font-black text-shadow-black border-solid">GUARDAR
+                                BUSQUEDA</button>
+                        </form>
+                    </a></li>
+            </ul>
+        </div>
+    </div>
+    <div>
+        <hr class="w-full border-t-1 border-white">
+    </div>
+    <div class="flex">
+        
+        <div class="w-full sm:w-1/5 p-1">
+            <h3 class="text-lg font-black text-gray-100 text-shadow-black m-4">FILTRAR POR MARCA</h3>
+            <ul class="space-y-2">
+                <li>
+                    <button onclick="showAll()" class="w-full btn glass font-black text-gray-100 text-shadow-black border border-solid">
+                        TODOS
+                    </button>
+                </li>
+                <li>
+                    <button onclick="filterCards('PORSCHE')" class="w-full btn glass font-black text-gray-100 text-shadow-black border border-solid">
+                        PORSCHE
+                    </button>
+                </li>
+                <li>
+                    <button onclick="filterCards('NISSAN')" class="w-full btn glass font-black text-gray-100 text-shadow-black border border-solid">
+                        NISSAN
+                    </button>
+                </li>
+                <li>
+                    <button onclick="filterCards('BENTLY')" class="w-full btn glass font-black text-gray-100 text-shadow-black border border-solid">
+                        BENTLY
+                    </button>
+                </li>
+                <li>
+                    <button onclick="filterCards('BMW')" class="w-full btn glass font-black text-gray-100 text-shadow-black border border-solid">
+                        BMW
+                    </button>
+                </li>
+                <li>
+                    <button onclick="filterCards('FORD')" class="w-full btn glass font-black text-gray-100 text-shadow-black border border-solid">
+                        FORD
+                    </button>
+                </li>
+                <li>
+                    <button onclick="filterCards('AUDI R8')" class="w-full btn glass font-black text-gray-100 text-shadow-black border border-solid">
+                        AUDI R8
+                    </button>
+                </li>
+                <li>
+                    <button onclick="filterCards('MASSERATI')" class="w-full btn glass font-black text-gray-100 text-shadow-black border border-solid">
+                        MASSERATI
+                    </button>
+                </li>
+                <li>
+                    <button onclick="filterCards('MERCEDES')" class="w-full btn glass font-black text-gray-100 text-shadow-black border border-solid">
+                        MERCEDES
+                    </button>
+                </li>
+                <li>
+                    <button onclick="filterCards('LAND-ROVER')" class="w-full btn glass font-black text-gray-100 text-shadow-black border border-solid">
+                        LAND-ROVER
+                    </button>
+                </li>
+            </ul>
+        </div>
+        
+
+        <div class="flex-auto">
+            <div class="flex flex-wrap justify-evenly m-2">
+                <div class="card w-60 bg-green-800 shadow-xl m-1">
+                    <figure><img src="../IMG/card1.jpg" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title font-black text-3xl md:text-4xl text-shadow-white">PORSCHE</h2>
+                        <p class="font-black text-white">El Porsche 911 es un coche deportivo de alta gama que ha
+                            sido un ícono en la industria automotriz durante más de 50 años.</p>
+                        <p class="text-shadow-black text-green-200 text-3xl md:text-4xl font-black">Precio: 106.900€</p>
+                        <div class="card-actions justify-center">
+                            <button class="btn glass font-black text-lg text-white border-solid"
+                                id="botonCatalogoC1">Mas Información</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card w-60 bg-green-800 shadow-xl m-1">
+                    <figure><img src="../IMG/card2.jpg"/></figure>
+                    <div class="card-body">
+                        <h2 class="card-title font-black text-3xl md:text-4xl text-shadow-white">NISSAN</h2>
+                        <p class="font-black text-white">Nissan Z 2023, un deportivo japonés que es el sucesor
+                            del 370Z1. Puede acelerar de 0 a 100 km/h en 4.5 segundos, 250 km/h, 400 caballos.</p>
+                        <p class="text-shadow-black text-green-200 text-3xl md:text-4xl font-black">Precio: 60.700€</p>
+                        <div class="card-actions justify-center">
+                            <button class="btn glass font-black text-lg text-white border-solid"
+                                id="botonCatalogoC2">Mas Información</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card w-60 bg-green-800 shadow-xl m-1">
+                    <figure><img src="../IMG/card3.jpg"/></figure>
+                    <div class="card-body">
+                        <h2 class="card-title font-black text-3xl md:text-4xl text-shadow-white">BENTLY</h2>
+                        <p class="font-black text-white">Bentley Mulliner Bacalar. Cada Bacalar es verdaderamente
+                            único, el resultado de la interacción directa entre el equipo de diseño de Bentley Mulliner
+                            y cada cliente individual.</p>
+                        <p class="text-shadow-black text-green-200 text-3xl md:text-4xl font-black">Precio: 75.500€</p>
+                        <div class="card-actions justify-center">
+                            <button class="btn glass font-black text-lg text-white border-solid"
+                                id="botonCatalogoC3">Mas Información</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card w-60 bg-green-800 shadow-xl m-1">
+                    <figure><img src="../IMG/card4.jpg"/></figure>
+                    <div class="card-body">
+                        <h2 class="card-title font-black text-3xl md:text-4xl text-shadow-white">BMW</h2>
+                        <p class="font-black text-white">El BMW 3.0 CSL Hommage es un automóvil fabricado para
+                            celebrar el 40 aniversario de BMW en Norteamérica</p>
+                        <p class="text-shadow-black text-green-200 text-3xl md:text-4xl font-black">Precio: 91.900€</p>
+                        <div class="card-actions justify-center">
+                            <button class="btn glass font-black text-base text-white border-solid"
+                                id="botonCatalogoC4">Mas Información</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card w-60 bg-green-800 shadow-xl m-1">
+                    <figure><img src="../IMG/card5.jpg"/></figure>
+                    <div class="card-body">
+                        <h2 class="card-title font-black text-3xl md:text-4xl text-shadow-white">FORD</h2>
+                        <p class="font-black text-white">Ford Mustang Shelby GT500. Equipado con un V8
+                            supercargado de 5.2 litros que produce 760 caballos de fuerza. Destaca por su presencia
+                            icónica en la cultura automotriz y su rendimiento deportivo moderno.</p>
+                        <p class="text-shadow-black text-green-200 text-3xl md:text-4xl font-black">Precio: 76.000€</p>
+                        <div class="card-actions justify-center">
+                            <button class="btn glass font-black text-base text-white border-solid">Mas
+                                Información</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card w-60 bg-green-800 shadow-xl m-1">
+                    <figure><img src="../IMG/card6.jpg"/></figure>
+                    <div class="card-body">
+                        <h2 class="card-title font-black text-3xl md:text-4xl text-shadow-white">AUDI R8</h2>
+                        <p class="font-black text-white">Audi R8 ofrece una experiencia de conducción deportiva.
+                            Audi es conocido por integrar tecnología avanzada y sistemas de asistencia al conductor.</p>
+                        <p class="text-shadow-black text-green-200 text-3xl md:text-4xl font-black">Precio: 65.900€</p>
+                        <div class="card-actions justify-center">
+                            <button class="btn glass font-black text-base text-white border-solid">Mas
+                                Información</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card w-60 bg-green-800 shadow-xl m-1">
+                    <figure><img src="../IMG/card7.jpg"/></figure>
+                    <div class="card-body">
+                        <h2 class="card-title font-black text-3xl md:text-4xl text-shadow-white">PORSCHE</h2>
+                        <p class="font-black text-white">Porsche 911 clásico de color verde menta con un kit de
+                            carrocería ancho. Motor: Los 911 tienen un motor bóxer de seis cilindros montado en la parte
+                            trasera.</p>
+                        <p class="text-shadow-black text-green-200 text-3xl md:text-4xl font-black">Precio: 49.900€</p>
+                        <div class="card-actions justify-center">
+                            <button class="btn glass font-black text-base text-white border-solid">Mas
+                                Información</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card w-60 bg-green-800 shadow-xl m-1">
+                    <figure><img src="../IMG/card8.jpg"/></figure>
+                    <div class="card-body">
+                        <h2 class="card-title font-black text-3xl md:text-4xl text-shadow-white">BMW XM MANSORY</h2>
+                        <p class="font-black text-white">Mansory, de estilo agresivo con parrilla frontal
+                            prominente y líneas de carrocería robusta, cuenta con un motor V8 biturbo de 4.4 litros.</p>
+                        <p class="text-shadow-black text-green-200 text-3xl md:text-4xl font-black">Precio: 105.000€</p>
+                        <div class="card-actions justify-center">
+                            <button class="btn glass font-black text-base text-white border-solid">Mas
+                                Información</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card w-60 bg-green-800 shadow-xl m-1">
+                    <figure><img src="../IMG/card9.jpg"/></figure>
+                    <div class="card-body">
+                        <h2 class="card-title font-black text-3xl md:text-4xl text-shadow-white">NISSAN</h2>
+                        <p class="font-black text-white">Nissan GT-R es un coche deportivo de alto rendimiento
+                            conocido por su potente motor y tecnología avanzada. Tiene un V6 biturbo de 3.8 litros con
+                            una potencia de 605 caballos de fuerza.</p>
+                        <p class="text-shadow-black text-green-200 text-3xl md:text-4xl font-black">Precio: 85.900€</p>
+                        <div class="card-actions justify-center">
+                            <button class="btn glass font-black text-base text-white border-solid">Mas
+                                Información</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card w-60 bg-green-800 shadow-xl m-1">
+                    <figure><img src="../IMG/card10.jpg"/></figure>
+                    <div class="card-body">
+                        <h2 class="card-title font-black text-3xl md:text-4xl text-shadow-white">MASSERATI</h2>
+                        <p class="font-black text-white">Maserati MC20 Notte, con un estilo distintivo con una
+                            estética sofisticada y deportiva. Con potentes motores, este cuenta con V8 biturbo.</p>
+                        <p class="text-shadow-black text-green-200 text-3xl md:text-4xl font-black">Precio: 108.500€</p>
+                        <div class="card-actions justify-center">
+                            <button class="btn glass font-black text-base text-white border-solid">Mas
+                                Información</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card w-60 bg-green-800 shadow-xl m-1">
+                    <figure><img src="../IMG/card11.jpg"/></figure>
+                    <div class="card-body">
+                        <h2 class="card-title font-black text-3xl md:text-4xl text-shadow-white">MERCEDES</h2>
+                        <p class="font-black text-white">Modelo coupé de Mercedes-Benz, destacando su diseño
+                            elegante y estética de lujo. Como innovación equipa el SmartKey y KEYLESS-GO para mayor
+                            comodidad y seguridad.</p>
+                        <p class="text-shadow-black text-green-200 text-3xl md:text-4xl font-black">Precio: 95.000€</p>
+                        <div class="card-actions justify-center">
+                            <button class="btn glass font-black text-base text-white border-solid">Mas
+                                Información</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card w-60 bg-green-800 shadow-xl m-1">
+                    <figure><img src="../IMG/card12.jpg"/></figure>
+                    <div class="card-body">
+                        <h2 class="card-title font-black text-3xl md:text-4xl text-shadow-white">LAND-ROVER</h2>
+                        <p class="font-black text-white">Land Rover equipado con una carrocería cuadrada,
+                            característica de los SUV de lujo de la marca. Sus llantas grandes, negras y brillantes con
+                            radios múltiples realzan su apariencia robusta y de alta gama.</p>
+                        <p class="text-shadow-black text-green-200 text-3xl md:text-4xl font-black">Precio: 78.000€</p>
+                        <div class="card-actions justify-center">
+                            <button class="btn glass font-black text-base text-white border-solid">Mas
+                                Información</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card w-60 bg-green-800 shadow-2xl m-1">
+                    <figure><img src="../IMG/card13.jpg"/></figure>
+                    <div class="card-body">
+                        <h2 class="card-title font-black text-3xl md:text-4xl text-shadow-white">PORSCHE</h2>
+                        <p class="font-black text-white">Porsche Gunther Werks 400R es un coche deportivo de alta
+                            gama que ha
+                            sido un ícono en la industria automotriz</p>
+                        <p class="text-shadow-black text-green-200 text-3xl md:text-4xl font-black">Precio: 76.300€</p>
+                        <div class="card-actions justify-center">
+                            <button class="btn glass font-black text-base text-white border-solid"
+                                id="botonCatalogoC1">Mas Información</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card w-60 bg-green-800 shadow-2xl m-1">
+                    <figure><img src="../IMG/card14.jpg"/></figure>
+                    <div class="card-body">
+                        <h2 class="card-title font-black text-3xl md:text-4xl text-shadow-white">NISSAN-Z</h2>
+                        <p class="font-black text-white">Nissan Z es un coche deportivo de alto rendimiento
+                            conocido por su potente motor y tecnología avanzada. Tiene un V6 biturbo de 3.8 litros con
+                            una potencia de 605 caballos de fuerza</p>
+                        <p class="text-shadow-black text-green-200 text-3xl md:text-4xl font-black">Precio: 89.300€</p>
+                        <div class="card-actions justify-center">
+                            <button class="btn glass font-black text-base text-white border-solid"
+                                id="botonCatalogoC1">Mas Información</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <hr class="w-full border-t-1 border-white">
+    </div>
+    <footer class="text-green-600 flex flex-wrap justify-between px-8 py-4 bg-custom-green text-shadow-black">
+        <div class="flex items-center mb-2 md:mb-0">
+            <i class="fa fa-phone mr-2 text-4xl shadow-custom"></i><a class="text-xl font-bobby-jones"> Contacto 662 789
+                611</a>
+        </div>
+        <div class="flex items-center space-x-4">
+            <span class="text-xl font-bobby-jones mr-2">Redes Sociales</span>
+            <a class="text-green-600 text-4xl"><i class="fa-brands fa-facebook"></i></a>
+            <a class="text-green-600 text-4xl"><i class="fa-brands fa-square-instagram"></i></a>
+            <a class="text-green-600 text-4xl"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+    </footer>
+</body>
+
+</html>

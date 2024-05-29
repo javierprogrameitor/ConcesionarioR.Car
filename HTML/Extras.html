@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.css"
+        integrity="sha512-KOWhIs2d8WrPgR4lTaFgxI35LLOp5PRki/DxQvb7mlP29YZ5iJ5v8tiLWF7JLk5nDBlgPP1gHzw96cZ77oD7zQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../JS/navegacion.js" defer></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'custom-green': '#A6B6A0',
+                        'custom-gray': '#C4C4C4',
+                    },
+                },
+            }
+        }
+    </script>
+    <style>
+        @font-face {
+            font-family: 'Bobby-Jones';
+            src: url('../IMGCRS/bobby_jones/BobbyJones/BobbyJonesSoft.otf') format('opentype');
+        }
+
+
+        .text-shadow-black {
+            text-shadow: 1px 1px 1px rgba(1, 1, 1, 1);
+        }
+
+        .text-shadow-white {
+            text-shadow: 1px 1px 1px rgb(253, 253, 260);
+        }
+
+        .font-bobby-jones {
+            font-family: 'Bobby-Jones', sans-serif;
+        }
+    </style>
+    <title>Catalogo</title>
+</head>
+
+<body class="bg-custom-green">
+    <nav class="bg-custom-green flex flex-wrap justify-evenly p-6">
+        <div class="flex items-center">
+            <img src="../IMG/logoConcesionario.png" alt="Logo" class="h-20 w-20">
+        </div>
+        <div class="text-center">
+            <span class="text-shadow-black text-green-600 text-3xl md:text-5xl font-bobby-jones">RENEW CAR, OFERTA
+                FLASH, ALQUILAR O VENDER SU COCHE</span>
+        </div>
+    </nav>
+    <div>
+        <hr class="w-full border-t-1 border-white">
+    </div>
+    <div class="flex flex-wrap justify-evenly m-1">
+        <div class="text-sm breadcrumbs">
+            <ul>
+
+                <li><a>
+                        <form action="Catalogo.html" method="POST" class="m-2">
+                            <button id="extrasCatalogo"
+                                class="text-gray-100 text-lg md:text-2xl font-black text-shadow-black border-solid">CATALOGO</button>
+                        </form>
+                    </a></li>
+                <li><a>
+                        <form action="index.html" method="POST" class="m-2">
+                            <button id="extrasInicio"
+                                class="text-gray-100 text-lg md:text-2xl font-black text-shadow-black border-solid">INICIO</button>
+                        </form>
+                    </a></li>
+            </ul>
+        </div>
+    </div>
+    <div>
+        <hr class="w-full border-t-1 border-white">
+    </div>
+
+    <div class="hero relative ">
+        <!-- Nuevo div para la nueva imagen y el texto -->
+        <div id="new-image-container">
+
+            <div class="flex flex-col items-center m-4">
+
+                <div class="flex flex-col items-center justify-center ml-10 mr-10">
+
+                    <p class="text-shadow-white text-green-800 text-xl md:text-2xl font-black ">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"
+                            class="h-6 w-6 mr-2 inline-block">
+                            <path
+                                d="M16.881 4.345A23.112 23.112 0 0 1 8.25 6H7.5a5.25 5.25 0 0 0-.88 10.427 21.593 21.593 0 0 0 1.378 3.94c.464 1.004 1.674 1.32 2.582.796l.657-.379c.88-.508 1.165-1.593.772-2.468a17.116 17.116 0 0 1-.628-1.607c1.918.258 3.76.75 5.5 1.446A21.727 21.727 0 0 0 18 11.25c0-2.414-.393-4.735-1.119-6.905ZM18.26 3.74a23.22 23.22 0 0 1 1.24 7.51 23.22 23.22 0 0 1-1.41 7.992.75.75 0 1 0 1.409.516 24.555 24.555 0 0 0 1.415-6.43 2.992 2.992 0 0 0 .836-2.078c0-.807-.319-1.54-.836-2.078a24.65 24.65 0 0 0-1.415-6.43.75.75 0 1 0-1.409.516c.059.16.116.321.17.483Z" />
+                        </svg>
+                        Si desea alquilar alguno de nuestros modelos no dude en llamar o puede venir a nuestro
+                        concesionaro.
+                        RenewCar, le atenderemos encantados....
+                    </p>
+                    <p class="text-shadow-white text-green-800 text-xl  md:text-2xl font-black ">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"
+                            class="h-6 w-6 mr-2 inline-block">
+                            <path
+                                d="M16.881 4.345A23.112 23.112 0 0 1 8.25 6H7.5a5.25 5.25 0 0 0-.88 10.427 21.593 21.593 0 0 0 1.378 3.94c.464 1.004 1.674 1.32 2.582.796l.657-.379c.88-.508 1.165-1.593.772-2.468a17.116 17.116 0 0 1-.628-1.607c1.918.258 3.76.75 5.5 1.446A21.727 21.727 0 0 0 18 11.25c0-2.414-.393-4.735-1.119-6.905ZM18.26 3.74a23.22 23.22 0 0 1 1.24 7.51 23.22 23.22 0 0 1-1.41 7.992.75.75 0 1 0 1.409.516 24.555 24.555 0 0 0 1.415-6.43 2.992 2.992 0 0 0 .836-2.078c0-.807-.319-1.54-.836-2.078a24.65 24.65 0 0 0-1.415-6.43.75.75 0 1 0-1.409.516c.059.16.116.321.17.483Z" />
+                        </svg>
+                        Puede enviarnos Imagenes de su coche para ser valorado:
+                    <div class="m-4">
+                        <label class="text-shadow-white text-green-800 text-xl  md:text-2xl font-black " for="file_input">Sube una
+                            imagen</label>
+                        <input
+                            class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none"
+                            id="file_input" type="file" accept="image/*">
+                    </div>
+                    <p class="text-shadow-white text-green-800 text-xl  md:text-2xl font-black ">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"
+                            class="h-6 w-6 mr-2 inline-block">
+                            <path
+                                d="M16.881 4.345A23.112 23.112 0 0 1 8.25 6H7.5a5.25 5.25 0 0 0-.88 10.427 21.593 21.593 0 0 0 1.378 3.94c.464 1.004 1.674 1.32 2.582.796l.657-.379c.88-.508 1.165-1.593.772-2.468a17.116 17.116 0 0 1-.628-1.607c1.918.258 3.76.75 5.5 1.446A21.727 21.727 0 0 0 18 11.25c0-2.414-.393-4.735-1.119-6.905ZM18.26 3.74a23.22 23.22 0 0 1 1.24 7.51 23.22 23.22 0 0 1-1.41 7.992.75.75 0 1 0 1.409.516 24.555 24.555 0 0 0 1.415-6.43 2.992 2.992 0 0 0 .836-2.078c0-.807-.319-1.54-.836-2.078a24.65 24.65 0 0 0-1.415-6.43.75.75 0 1 0-1.409.516c.059.16.116.321.17.483Z" />
+                        </svg>
+                        Nuestro coche Oferta flash
+                    </p>
+                </div>
+
+                <img src="../IMG/card1.jpg" id="new-image" class="w-1/2 h-auto">
+                <div class="carousel carousel-end rounded-box">
+                    <div class="carousel-item w-16 sm:w-8 md:w-20 lg:w-40 h-16 sm:h-8 md:h-20 lg:h-40">
+                        <img src="../IMGCRS/carousel1.jpg" class="w-full h-full object-cover" />
+                    </div>
+                    <div class="carousel-item w-16 sm:w-8 md:w-20 lg:w-40 h-16 sm:h-8 md:h-20 lg:h-40">
+                        <img src="../IMGCRS/carousel2.jpg" class="w-full h-full object-cover" />
+                    </div>
+                    <div class="carousel-item w-16 sm:w-8 md:w-20 lg:w-40 h-16 sm:h-8 md:h-20 lg:h-40">
+                        <img src="../IMGCRS/carousel3.jpg" class="w-full h-full object-cover" />
+                    </div>
+                    <div class="carousel-item w-16 sm:w-8 md:w-20 lg:w-40 h-16 sm:h-8 md:h-20 lg:h-40">
+                        <img src="../IMGCRS/carousel4.jpg" class="w-full h-full object-cover" />
+                    </div>
+                    <div class="carousel-item w-16 sm:w-8 md:w-20 lg:w-40 h-16 sm:h-8 md:h-20 lg:h-40">
+                        <img src="../IMGCRS/carousel5.jpg" class="w-full h-full object-cover" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div>
+        <hr class="w-full border-t-1 border-white">
+    </div>
+    <footer class="text-green-600 flex flex-wrap justify-between px-8 py-4 bg-custom-green text-shadow-black">
+        <div class="flex items-center mb-2 md:mb-0">
+            <i class="fa fa-phone mr-2 text-4xl shadow-custom"></i><a class="text-xl font-bobby-jones"> Contacto 662 789
+                611</a>
+        </div>
+        <div class="flex items-center space-x-4">
+            <span class="text-xl font-bobby-jones mr-2">Redes Sociales</span>
+            <a class="text-green-600 text-4xl"><i class="fa-brands fa-facebook"></i></a>
+            <a class="text-green-600 text-4xl"><i class="fa-brands fa-square-instagram"></i></a>
+            <a class="text-green-600 text-4xl"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+    </footer>
+</body>
+
+</html>

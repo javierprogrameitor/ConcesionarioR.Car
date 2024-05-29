@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.css"
+    integrity="sha512-KOWhIs2d8WrPgR4lTaFgxI35LLOp5PRki/DxQvb7mlP29YZ5iJ5v8tiLWF7JLk5nDBlgPP1gHzw96cZ77oD7zQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../JS/navegacion.js" defer></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'custom-green': '#A6B6A0',
+            'custom-gray': '#C4C4C4',
+          },
+        },
+      }
+    }
+  </script>
+  <style>
+  @font-face {
+      font-family: 'Bobby-Jones';
+      src: url('../IMGCRS/bobby_jones/BobbyJones/BobbyJonesSoft.otf') format('opentype');
+    }
+
+    .text-shadow-black {
+      text-shadow: 1px 1px 1px rgba(1, 1, 1, 1);
+    }
+
+    .text-shadow-white {
+      text-shadow: 1px 1px 1px rgb(253, 253, 252);
+    }
+
+    .font-bobby-jones {
+      font-family: 'Bobby-Jones', sans-serif;
+    }
+
+  </style>
+  <title>Registro</title>
+</head>
+<body class="bg-custom-green flex flex-col">
+  <nav class="bg-custom-green flex justify-evenly p-6">
+    <div class="flex items-center">
+      <img src="../IMG/logoConcesionario.png" alt="Logo" class="h-20 w-20 ">
+    </div>
+    <div>
+      <span class="text-shadow-black text-green-600 text-5xl font-bobby-jones ">Renew Car</span>
+    </div>
+  </nav>
+  <div>
+    <hr class="w-full border-t-1 border-white mb-4">
+  </div>
+  <div class="flex flex-grow flex-col items-center justify-center p-4">
+    <div class="bg-custom-gray rounded-lg p-6 md:p-8 mb-6 form-border text-shadow-black w-full max-w-md">
+      <form action="../index.html" method="POST">
+        <div>
+          <hr class="w-full border-t-1 border-white mb-4">
+        </div>
+        <label for="nombre" class="block text-green-600 text-lg font-bold mb-2 ">Nombre:</label>
+        <input type="text" id="nombre" name="nombre"
+          class="shadow appearance-none border border-green-600 rounded w-full py-2 px-3 text-white leading-tight focus:outline-none"
+          required>
+        <label for="apellidos" class="block text-green-600 text-lg font-bold mb-2 mt-4">Apellidos:</label>
+        <input type="text" id="apellidos" name="apellidos"
+          class="shadow appearance-none border border-green-600 rounded w-full py-2 px-3 text-white leading-tight focus:outline-none"
+          required>
+        <label for="email" class="block text-green-600 text-lg font-bold mb-2 mt-4">Email:</label>
+        <input type="email" id="email" name="email"
+          class="shadow appearance-none border border-green-600 rounded w-full py-2 px-3 text-white leading-tight focus:outline-none"
+          required>
+        <label for="usuario" class="block text-green-600 text-lg font-bold mb-2 mt-4">Nombre Usuario:</label>
+        <input type="text" id="usuario" name="usuario"
+          class="shadow appearance-none border border-green-600 rounded w-full py-2 px-3 text-white leading-tight focus:outline-none"
+          required>
+        <label for="contrasena" class="block text-green-600 text-lg font-bold mb-2 mt-4">Contraseña:</label>
+        <input type="password" id="contrasena" name="contrasena"
+          class="shadow appearance-none border border-green-600 rounded w-full py-2 px-3 text-white leading-tight focus:outline-none"
+          required>
+        <label for="repite_contrasena" class="block text-green-600 text-lg font-bold mb-2 mt-4">Repite
+          Contraseña:</label>
+        <input type="password" id="repite_contrasena" name="repite_contrasena"
+          class="shadow appearance-none border border-green-600 rounded w-full py-2 px-3 text-white leading-tight focus:outline-none"
+          required>
+        <div class="flex justify-center text-shadow-black mt-4">
+          <button type="submit" id="crearCuenta"
+            class="bg-green-700 hover:bg-green-600 text-shadow-black font-bold py-2 px-4 rounded focus:outline-none mt-4 text-shadow-black">CREAR
+            CUENTA</button>
+        </div>
+        <div>
+          <hr class="w-full border-t-1 border-white mt-4">
+        </div>
+      </form>
+    </div>
+  </div>
+  <div>
+    <hr class="w-full border-t-1 border-white">
+  </div>
+  <footer class="text-green-600 flex justify-between px-8 py-4 bg-custom-green text-shadow-black">
+    <div class="flex items-center mb-2 md:mb-0">
+      <i class="fa fa-phone mr-2 text-4xl shadow-custom"></i><a class="text-xl font-bobby-jones"> Contacto 662
+        789 611</a>
+    </div>
+    <div class="flex items-center space-x-4">
+      <span class="text-xl font-bobby-jones mr-2">Redes Social</span>
+      <a class="text-green-600 text-4xl"><i class="fa-brands fa-facebook"></i></a>
+      <a class="text-green-600 text-4xl"><i class="fa-brands fa-square-instagram"></i></a>
+      <a class="text-green-600 text-4xl"><i class="fa-brands fa-linkedin"></i></a>
+    </div>
+  </footer>
+</body>
+
+</html>

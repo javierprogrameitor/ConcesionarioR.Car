@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.css"
+    integrity="sha512-KOWhIs2d8WrPgR4lTaFgxI35LLOp5PRki/DxQvb7mlP29YZ5iJ5v8tiLWF7JLk5nDBlgPP1gHzw96cZ77oD7zQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="JS/navegacion.js" defer></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'custom-green': '#A6B6A0',
+            'custom-gray': '#C4C4C4',
+          },
+        },
+      }
+    }
+  </script>
+  <style>
+    @font-face {
+      font-family: 'Bobby-Jones';
+      src: url('IMGCRS/bobby_jones/BobbyJones/BobbyJonesSoft.otf') format('opentype');
+    }
+
+    .text-shadow-black {
+      text-shadow: 1px 1px 1px rgba(1, 1, 1, 1);
+    }
+
+    .text-shadow-white {
+      text-shadow: 1px 1px 1px rgb(253, 253, 252);
+    }
+
+    .font-bobby-jones {
+      font-family: 'Bobby-Jones', sans-serif;
+    }
+  </style>
+  <title>Pantalla Principal</title>
+</head>
+
+<body class="bg-custom-green">
+  <div>
+    <hr class="w-full border-t-1 border-white">
+  </div>
+  <nav class="bg-custom-green flex flex-wrap justify-evenly p-6">
+    <div class="flex items-center">
+      <img src="IMG/logoConcesionario.png" alt="Logo" class="h-20 w-20">
+    </div>
+    <div class="text-center">
+      <span class="text-shadow-black text-green-600 text-3xl md:text-5xl font-bobby-jones">RENEW CAR, NUEVOS,
+        IMPORTADOS, KMS 0 Y OCASION</span>
+    </div>
+  </nav>
+  <div>
+    <hr class="w-full border-t-1 border-white">
+  </div>
+
+  <div class="flex flex-wrap justify-evenly m-1">
+    <div class="text-sm breadcrumbs">
+      <ul>
+        <li><a>
+            <form action="/HTML/Principal.html" method="POST" class="m-2">
+              <button id="registro"
+                class="text-gray-100 text-lg md:text-2xl font-black text-shadow-black border-solid">REGISTRARSE</button>
+            </form>
+          </a></li>
+        <li><a>
+            <form action="/HTML/Principal.html" method="POST" class="m-2">
+              <button id="inicio"
+                class="text-gray-100 text-lg md:text-2xl font-black text-shadow-black border-solid">INICIAR</button>
+            </form>
+          </a></li>
+        <li><a>
+            <form action="/HTML/Catalogo.html" method="POST" class="m-2">
+              <button id="catalogo"
+                class="text-gray-100  text-lg md:text-2xl font-black text-shadow-black border-solid">CATALOGO</button>
+            </form>
+          </a></li>
+        <li><a>
+            <form action="/HTML/Guardar.html" method="POST" class="m-2">
+              <button id="guardar"
+                class="text-gray-100 text-lg md:text-2xl font-black text-shadow-black border-solid">GUARDAR
+                BUSQUEDA</button>
+            </form>
+          </a></li>
+      </ul>
+    </div>
+  </div>
+  <div>
+    <hr class="w-full border-t-1 border-white m-2">
+  </div>
+  <div class="carousel w-full max-h-96">
+    <!-- Carousel items -->
+    <div id="slide1" class="carousel-item relative w-full">
+      <img src="IMG/CapturaLogo.png" class="w-full" />
+      <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+        <a href="#slide4" class="btn btn-circle">❮</a>
+        <a href="#slide2" class="btn btn-circle">❯</a>
+      </div>
+    </div>
+    <div id="slide2" class="carousel-item relative w-full">
+      <img src="IMG/concesionario3.jpg" class="w-full" />
+      <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+        <a href="#slide1" class="btn btn-circle">❮</a>
+        <a href="#slide3" class="btn btn-circle">❯</a>
+      </div>
+    </div>
+    <div id="slide3" class="carousel-item relative w-full">
+      <img src="IMG/concesionario4.jpg" class="w-full" />
+      <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+        <a href="#slide2" class="btn btn-circle">❮</a>
+        <a href="#slide4" class="btn btn-circle">❯</a>
+      </div>
+    </div>
+    <div id="slide4" class="carousel-item relative w-full">
+      <img src="IMG/concesionario2.jpg" class="w-full" />
+      <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+        <a href="#slide3" class="btn btn-circle">❮</a>
+        <a href="#slide5" class="btn btn-circle">❯</a>
+      </div>
+    </div>
+    <div id="slide5" class="carousel-item relative w-full">
+      <img src="IMG/concesionario5.jpg" class="w-full" />
+      <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+        <a href="#slide4" class="btn btn-circle">❮</a>
+        <a href="#slide1" class="btn btn-circle">❯</a>
+      </div>
+    </div>
+  </div>
+  <div>
+    <hr class="w-full border-t-1 border-white">
+  </div>
+  <div class="flex flex-wrap justify-evenly m-1">
+    <div class="text-sm breadcrumbs">
+      <ul>
+        <li><a>
+            <form action="/HTML/Extras.html" method="POST" class="m-2">
+              <button id="extras1"
+                class="text-gray-100 text-lg md:text-2xl font-black text-shadow-black border-solid">OFERTA
+                FLASH</button>
+            </form>
+          </a></li>
+        <li><a>
+            <form action="/HTML/Extras.html" method="POST" class="m-2">
+              <button id="extras2"
+                class="text-gray-100  text-lg md:text-2xl font-black text-shadow-black border-solid">ALQUILAR
+                NUEVO</button>
+            </form>
+          </a></li>
+        <li><a>
+            <form action="/HTML/Extras.html" method="POST" class="m-2">
+              <button id="extras3"
+                class="text-gray-100 text-lg md:text-2xl font-black text-shadow-black border-solid">VENDER
+                SU COCHE</button>
+            </form>
+          </a></li>
+      </ul>
+    </div>
+  </div>
+  <div>
+    <hr class="w-full border-t-1 border-white">
+  </div>
+  <div class="flex flex-wrap justify-center">
+    <div class="card w-80 md:w-96 bg-green-800 shadow-xl m-2">
+      <figure><img src="IMG/card1.jpg" />
+      </figure>
+      <div class="card-body">
+        <h2 class="card-title font-black text-3xl md:text-4xl text-shadow-white">PORSCHE</h2>
+        <p class="font-black text-white">El Porsche 911 es un coche deportivo de alta gama que ha sido un
+          ícono en la industria automotriz durante más de 50 años. </p>
+        <p class="text-shadow-black text-green-200 text-3xl md:text-4xl font-black">Precio: 106.900€</p>
+        <div class="card-actions justify-center">
+          <button class="btn glass font-black text-lg text-white border-solid" id="botonCatalogoP1">Información</button>
+        </div>
+      </div>
+    </div>
+    <div class="card w-80 md:w-96 bg-green-800 shadow-xl m-2">
+      <figure><img src="IMG/card2.jpg" />
+      </figure>
+      <div class="card-body">
+        <h2 class="card-title font-black text-3xl md:text-4xl text-shadow-white">NISSAN</h2>
+        <p class="font-black text-white">Nissan Z 2023, un deportivo japonés que es el sucesor del 370Z1.
+          Puede acelerar de 0 a 100 km/h en 4.5 segundos, 250 km/h, 400 caballos. </p>
+        <p class="text-shadow-black text-green-200 text-3xl md:text-4xl font-black">Precio: 56.700€</p>
+        <div class="card-actions justify-center">
+          <button class="btn glass font-black text-lg text-white border-solid" id="botonCatalogoP2">Información</button>
+        </div>
+      </div>
+    </div>
+    <div class="card w-80 md:w-96 bg-green-800 shadow-xl m-2">
+      <figure><img src="IMG/card3.jpg" />
+      </figure>
+      <div class="card-body">
+        <h2 class="card-title font-black text-3xl md:text-4xl text-shadow-white">BENTLY</h2>
+        <p class="font-black text-white"> Bentley Mulliner Bacalar. Cada Bacalar es verdaderamente único,
+          el resultado de la interacción directa entre el equipo de diseño y cada cliente
+        </p>
+        <p class="text-shadow-black text-green-200 text-3xl md:text-4xl font-black">Precio: 75.500€</p>
+        <div class="card-actions justify-center">
+          <button class="btn glass font-black text-lg text-white border-solid" id="botonCatalogoP3">Información</button>
+        </div>
+      </div>
+    </div>
+    <div class="card w-80 md:w-96 bg-green-800 shadow-xl m-2">
+      <figure><img src="IMG/card4.jpg" />
+      </figure>
+      <div class="card-body">
+        <h2 class="card-title font-black text-3xl md:text-4xl text-shadow-white">BMW</h2>
+        <p class="font-black text-white">El BMW 3.0 CSL Hommage es un automóvil fabricado para celebrar
+          el 40 aniversario de BMW en Norteamérica</p>
+        <p class="text-shadow-black text-green-200 text-3xl md:text-4xl font-black">Precio: 91.900€</p>
+        <div class="card-actions justify-center">
+          <button class="btn glass font-black text-lg text-white border-solid" id="botonCatalogoP4">Información</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <hr class="w-full border-t-1 border-white">
+  </div>
+  <footer class="text-green-600 flex flex-wrap justify-between px-8 py-4 bg-custom-green text-shadow-black">
+    <div class="flex items-center mb-2 md:mb-0">
+      <i class="fa fa-phone mr-2 text-4xl shadow-custom"></i><a class="text-xl font-bold"> Contacto 662 789
+        611</a>
+    </div>
+    <div class="flex items-center space-x-4">
+      <span class="text-xl font-bold mr-2">Redes Sociales</span>
+      <a class="text-green-600 text-4xl"><i class="fa-brands fa-facebook"></i></a>
+      <a class="text-green-600 text-4xl"><i class="fa-brands fa-square-instagram"></i></a>
+      <a class="text-green-600 text-4xl"><i class="fa-brands fa-linkedin"></i></a>
+    </div>
+  </footer>
+  <div>
+    <hr class="w-full border-t-1 border-white">
+  </div>
+</body>
+
+</html>
